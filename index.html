@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hook Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <style>/* Basic resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+/* Navbar styles */
+.navbar {
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+.nav-list a:hover {
+    color: #4CAF50;
+}
+
+/* Button styles */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.hookup-btn {
+    padding: 15px 30px;
+    font-size: 24px;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.hookup-btn.animate {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Responsive Navbar */
+@media (max-width: 600px) {
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+}</style>
+    <!-- <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav> -->
+
+    <div class="container">
+        <button class="hookup-btn" onclick="animateButton()">Fuck u</button>
+    </div>
+
+    <script>
+        window.onload = function() {
+    setTimeout(function() {
+        document.querySelector('.hookup-btn').classList.add('animate');
+    }, 500);
+}
+
+function animateButton() {
+    alert("fuck off");
+}
+    </script>
+</body>
+</html>
